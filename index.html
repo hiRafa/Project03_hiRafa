@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Extra METAS to help with Search Engines -->
+    <meta
+      name="description"
+      content="Check our stores and breads we have! We also have amazing seasonal breads"
+    />
+    <!-- The following metas are when sharing a link on FB (example) it shows title, description and image -->
+    <meta property="og:title" content="Batata Bakery!" />
+    <meta
+      property="og:description"
+      content="Breads from all over the world and tasty seasonal breads! Sour dough breads also available!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https/ified.com" />
+    <!-- FONTs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- JS -->
+    <script defer src="script.js"></script>
+  </head>
+  <body class="body background__pg1">
+    <main>
+      <div class="tab__content__container">
+        <!-- Home -->
+        <div class="tab__content tab__content--1 tab__content-active grid__pg1">
+          <h1 class="grid__pg1-name">HIRASHIKI RAFAEL</h1>
+          <div class="grid__pg1-text">
+            <h2>Front End Developer</h2>
+            <p>
+              Brazilian web developer living in Japan. Started web programming
+              journey in March 2022. Available in: English, Portuguese and
+              Japanese. Interests: animal life, games, painting, visual effects,
+              technology and animation.
+            </p>
+          </div>
+          <!-- <img
+            srcset="
+              small-car-image.jpg   400w,
+              medium-car-image.jpg  800w,
+              large-car-image.jpg  1200w
+            "
+            sizes="(min-width: 1280px) 1200px,
+         (min-width: 768px) 400px,
+         100vw"
+            src="images/hiRafa_profile.png"
+            alt="HIRASHIKI RAFAEL profile photo"
+          /> -->
+          <img
+            src="images/hiRafa_profile.png"
+            alt="HIRASHIKI RAFAEL profile
+          photo"
+            class="grid__pg1-photo"
+          />
+          <div class="grid__pg1-contact">
+            <button class="button__logo-contact">
+              <a href="https://github.com/hiRafa" target="_blank"
+                ><img src="./images/log_git_black.png" class="logo_contact"
+              /></a>
+            </button>
+
+            <button class="button__logo-contact">
+              <a href="https://github.com/hiRafa" target="_blank"
+                ><img src="./images/log_git_black.png" class="logo_contact"
+              /></a>
+            </button>
+
+            <button class="button__logo-contact">
+              <a href="https://github.com/hiRafa" target="_blank"
+                ><img src="./images/log_git_black.png" class="logo_contact"
+              /></a>
+            </button>
+          </div>
+          <div class="grid__pg1-programmingIcons">
+            <img />
+            <img />
+            <img src="./images/logo_sass.png" class="logo_programming" />
+            <img />
+          </div>
+        </div>
+        <!-- First Project -->
+        <div class="tab__content tab__content--2">
+          <div></div>
+        </div>
+        <!-- Second Project -->
+        <div class="tab__content tab__content--3"></div>
+        <!-- React Project -->
+        <div class="tab__content tab__content--4"></div>
+        <!-- Next Project -->
+        <div class="tab__content tab__content--5"></div>
+        <!-- Third Project -->
+        <div class="tab__content tab__content--6"></div>
+        <!-- Art Portfolio -->
+        <div class="tab__content tab__content--7"></div>
+      </div>
+    </main>
+    <section class="nav">
+      <!-- Buttons container -->
+      <div class="tab__button__container">
+        <button
+          class="button button__tab--1 button__tab button__tab-active"
+          data-tab="1"
+        >
+          LP
+        </button>
+        <button class="button button__tab--2 button__tab" data-tab="2">
+          <spam>HTML</spam>
+          <spam>CSS</spam>
+        </button>
+        <button class="button button__tab--3 button__tab" data-tab="3">
+          JS
+        </button>
+        <button class="button button__tab--4 button__tab" data-tab="4">
+          React
+        </button>
+        <button class="button button__tab--5 button__tab" data-tab="5">
+          TS
+        </button>
+        <button class="button button__tab--6 button__tab" data-tab="6">
+          Next
+        </button>
+        <button class="button button__tab--7 button__tab" data-tab="7">
+          Art
+        </button>
+      </div>
+      <p>arrow</p>
+    </section>
+  </body>
+</html>
