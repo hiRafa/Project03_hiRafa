@@ -55,7 +55,9 @@
 :root {
   --color-1: #23f0d8;
   --color-1-darkest: #32706c;
+  --color-1-darkest-shadow: rgb(50, 112, 108, 0.4);
   --color-complementary: #f06824;
+  --color-complementary-dark: #a33600;
   /* --color-1-highLight: #ffae17;
     --color-1-lowSaturation: #bf9039;
     --color-1-medium: #e6ad45;
@@ -176,30 +178,28 @@ p {
     font-size: 1.23rem; /* 16/13 */
   }
   h1 {
-    font-size: 4rem;
-    font-weight: 700;
-  }
-
-  h2 {
     font-size: 3.5rem;
     font-weight: 700;
   }
 
-  h3 {
+  h2 {
     font-size: 3rem;
+    font-weight: 700;
   }
 
-  h4 {
+  h3 {
     font-size: 2.5rem;
   }
 
-  h5 {
+  h4 {
     font-size: 2rem;
   }
 
+  h5,
   h6 {
     font-size: 1.5rem;
   }
+
   p {
     font-size: calc(var(--p_font-size) * 1.5); /* 1.5rem */
   }
@@ -252,6 +252,7 @@ button:hover {
   overflow: hidden;
   display: grid;
   grid-template-rows: 80vh 20vh; /* bigger part for whole page*/
+  color: var(--color-1-darkest);
 }
 
 .background__pg1 {
@@ -261,12 +262,16 @@ button:hover {
   transition: var(--animation-all);
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1024px) {
   .tab__content {
+    opacity: 0;
+    transition: var(--animation-all);
     display: none;
   }
   .tab__content__container {
     display: grid;
+    opacity: 1;
+    transition: var(--animation-all);
     width: 100%;
     height: 100%;
     align-content: center;
@@ -274,12 +279,14 @@ button:hover {
   }
 
   .tab__content-active {
+    opacity: 1;
+    transition: var(--animation-all);
+    display: grid;
     max-width: 100%;
     max-height: 100%;
-    display: grid;
   }
 
-  .grid__pg1 {
+  .grid__pg {
     width: 76vw;
     grid-template-columns: repeat(12, 1fr);
     text-align: left;
@@ -287,47 +294,161 @@ button:hover {
     row-gap: 25px;
   }
 
+  .grid__lp {
+    height: 60vh;
+  }
+
   .grid__pg1-name {
     grid-column-start: span 12;
+    /* grid-row: 1 / 3; */
+    /* grid-auto-rows: auto; */
     letter-spacing: 1.6rem;
+    align-self: center;
+    padding: 0 0.5rem;
   }
 
   .grid__pg1-text {
-    grid-column-start: span 7;
+    grid-column-start: span 8;
+    /* grid-row: 4 / 11; */
+  }
+
+  .grid__pg1-text h2,
+  .grid__pg1-text p,
+  .grid__pg1-logos {
+    padding: 1rem 0.5rem;
+  }
+
+  .grid__pg1-profile {
+    grid-column: 9/13;
+    display: grid;
+    grid-template-columns: 20vw 10vw;
+    column-gap: 20px;
   }
 
   .grid__pg1-photo {
     width: 100%;
-
-    grid-column-start: span 3;
   }
 
   .grid__pg1-contact {
-    grid-column-start: span 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
 
   .button__logo-contact {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem 0;
   }
 
-  .logo_contact {
-    width: 90%;
-    height: 90%;
-  }
-
-  .grid__pg1-programmingIcons {
-    grid-column-start: span 12;
+  .logo_button {
+    width: 85%;
+    height: 85%;
   }
 
   .logo_programming {
-    width: 5rem;
+    width: 4rem;
   }
 }
 
+/*---------------------  Pages ------------------------------*/
+.grid__pgs {
+  height: 50vh;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.grid__pg-title {
+  grid-column-start: span 12;
+  grid-row-start: span 3;
+  text-align: center;
+}
+
+.grid__pg-screenshots {
+  width: 100%;
+  grid-column-start: span 6;
+  grid-row-start: span 9;
+  position: relative;
+}
+
+.screenshot-1,
+.screenshot-2,
+.screenshot-3 {
+  position: absolute;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0px 0px 10px 7px var(--color-1-darkest-shadow);
+}
+
+.screenshot-1 {
+  left: -10%;
+}
+
+.screenshot-2 {
+  right: 10%;
+  top: 15%;
+}
+
+.screenshot-3 {
+  top: 30%;
+}
+
+.grid__pg-text {
+  grid-column: 7 / 13;
+  grid-row: 4 / 12;
+  overflow: hidden;
+}
+
+.grid__pg-links {
+  display: flex;
+  grid-column: 7 / 13;
+  grid-row-start: 12;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button__links {
+  background-color: var(--color-black);
+  width: 6rem;
+  height: 6rem;
+}
+
+.button__links-page {
+  width: 7rem;
+  height: 7rem;
+}
+
+/*---------------------  Art Page ------------------------------*/
+
+.grid__artpg {
+  height: 70vh;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__artpg-behance,
+.grid__artpg-artstation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.artpg-behance img,
+.artpg-artstation img {
+  width: 100%;
+}
+
+.button__art {
+  width: 400px;
+  height: 60px;
+}
+
+.button__art img {
+  width: 80%;
+  height: 80%;
+}
+
+.button__art-behance {
+  background-color: #005cff;
+}
 /* ---------------- NAV BAR bottom */
 
 .nav {
@@ -346,12 +467,13 @@ button:hover {
 }
 
 .button__tab {
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 5.5rem;
+  width: 5.5rem;
   color: var(--color-white);
   position: relative;
   bottom: 0;
   transition: var(--animation-all);
+  font-size: 1.25rem;
 }
 
 .button__tab--4,
@@ -368,10 +490,12 @@ button:hover {
 }
 
 .button__tab-active {
-  height: 5rem;
-  width: 5rem;
+  height: 6.5rem;
+  width: 6.5rem;
   background-color: var(--color-complementary);
   position: relative;
   bottom: 30px;
   transition: var(--animation-all);
+  font-weight: 700;
+  font-size: 1.5rem;
 }
