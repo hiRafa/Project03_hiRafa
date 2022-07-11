@@ -26,3 +26,18 @@ tabsButtonContainer.addEventListener('click', function (e) {
     document.querySelector('.body').classList.remove('background__pg1');
   }
 });
+
+const iconArrow = document.querySelector('.icon-arrow-with-circle-down');
+const tabContainer = document.querySelector('.tab__button__container');
+
+iconArrow.addEventListener('click', function (e) {
+  if (tabContainer.classList.contains('tab__button__container-down')) {
+    tabContainer.classList.remove('tab__button__container-down');
+    iconArrow.classList.remove('icon__rotate');
+    return;
+  }
+  console.log(tabContainer);
+
+  tabContainer.classList.add('tab__button__container-down');
+  iconArrow.classList.add('icon__rotate');
+});
