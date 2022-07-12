@@ -262,21 +262,20 @@ button:hover {
   transition: var(--animation-all);
 }
 
-.tab__content {
-  opacity: 0;
-  transition: var(--animation-all);
-  display: none;
-}
-
 .tab__content__container {
   display: grid;
   opacity: 1;
   transition: var(--animation-all);
   width: 100%;
-  height: 100%;
   align-content: center;
   justify-content: center;
   padding: 1rem;
+}
+
+.tab__content {
+  opacity: 0;
+  transition: var(--animation-all);
+  display: none;
 }
 
 .tab__content-active {
@@ -622,7 +621,7 @@ button:hover {
   align-items: center;
   column-gap: 20px;
   position: fixed;
-  bottom: 120px;
+  bottom: 100px;
   transition: var(--animation-all);
 }
 
@@ -679,7 +678,7 @@ button:hover {
 @media screen and (min-width: 1024px) {
   .tab__button__container-down {
     position: fixed;
-    bottom: -60px;
+    bottom: -80px;
     transition: var(--animation-all);
   }
 
@@ -690,17 +689,18 @@ button:hover {
 }
 
 .icon {
-  width: 3em;
-  height: 3em;
+  width: 4rem;
+  height: 4rem;
   fill: var(--color-complementary);
 
   /* fill: var(--color-1-darkest); */
   padding: 0.1rem;
   transition: all 0.1s;
   position: fixed;
-  bottom: 50px;
+  bottom: 20px;
   transition: var(--animation-all);
   padding: 0.5rem;
+  align-self: flex-end;
 }
 
 /* .icon:link,
