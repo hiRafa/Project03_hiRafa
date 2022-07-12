@@ -633,7 +633,7 @@ button:hover {
 
 .tab__button__container-down {
   position: fixed;
-  bottom: -100px;
+  bottom: -80px;
   transition: var(--animation-all);
 }
 
@@ -675,6 +675,22 @@ button:hover {
   font-size: 1.5rem;
 }
 
+@media screen and (min-width: 720px) {
+  .tab__button__container {
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .tab__button__container-down {
+    position: fixed;
+    bottom: -60px;
+    transition: var(--animation-all);
+  }
+
+  .button__tab {
+    border-radius: 15px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .tab__button__container-down {
     position: fixed;
@@ -689,8 +705,8 @@ button:hover {
 }
 
 .icon {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   fill: var(--color-complementary);
 
   /* fill: var(--color-1-darkest); */
@@ -735,11 +751,8 @@ button:hover {
 }
 
 @media screen and (min-width: 720px) {
-  .tab__button__container {
-    grid-template-rows: repeat(1, 1fr);
-  }
-
-  .button__tab {
-    border-radius: 15px;
+  .icon {
+    width: 4rem;
+    height: 4rem;
   }
 }
