@@ -201,7 +201,7 @@ p {
   }
 
   p {
-    font-size: calc(var(--p_font-size) * 1.5); /* 1.5rem */
+    font-size: calc(var(--p_font-size) * 1.8); /* 1.5rem */
   }
 }
 @media screen and (min-width: 1024px) {
@@ -553,8 +553,11 @@ button:hover {
 /*---------------------  Art Page ------------------------------*/
 
 .grid__artpg {
-  height: 70vh;
+  height: 100%;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
+  padding: 1rem;
 }
 
 .grid__artpg-behance,
@@ -562,17 +565,17 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  row-gap: 10px;
 }
 
-.artpg-behance img,
-.artpg-artstation img {
-  width: 100%;
+.artpg-behance,
+.artpg-artstation {
+  width: 80%;
 }
 
 .button__art {
-  width: 400px;
-  height: 60px;
+  width: 300px;
+  height: 50px;
 }
 
 .button__art img {
@@ -582,6 +585,18 @@ button:hover {
 
 .button__art-behance {
   background-color: #005cff;
+}
+
+@media screen and (min-width: 1024px) {
+  .artpg-behance img,
+  .artpg-artstation img {
+    width: 100%;
+  }
+
+  .button__art {
+    width: 300px;
+    height: 50px;
+  }
 }
 
 /* ---------------- NAV BAR bottom */
@@ -622,6 +637,9 @@ button:hover {
   transition: var(--animation-all);
   font-size: 1.25rem;
   border-radius: 50%;
+}
+.button__tab:hover {
+  background-color: var(--color-1);
 }
 
 .button__tab--4,
@@ -695,6 +713,10 @@ button:hover {
   fill: var(--color-complementary);
   transition: var(--animation-all);
 }
+/* .nav__bg {
+  clip-path: polygon(0% 0%, 100% 0%, 75% 80%, 0% 80%);
+  background-color: #23f0d8;
+} */
 
 @media screen and (min-width: 720px) {
   .tab__button__container {
