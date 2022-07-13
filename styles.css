@@ -717,6 +717,7 @@ button:hover {
   transition: var(--animation-all);
   padding: 0.5rem;
   align-self: flex-end;
+  user-select: none;
 }
 
 /* .icon:link,
