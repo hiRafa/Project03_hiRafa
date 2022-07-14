@@ -646,7 +646,7 @@ button:hover {
   align-items: center;
   column-gap: 20px;
   position: fixed;
-  bottom: 100px;
+  bottom: 140px;
   transition: var(--animation-all);
 }
 
@@ -733,12 +733,11 @@ button:hover {
   width: 5rem;
   height: 5rem;
   fill: var(--color-complementary);
-
   /* fill: var(--color-1-darkest); */
   padding: 0.1rem;
   transition: all 0.1s;
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   transition: var(--animation-all);
   padding: 0.5rem;
   align-self: flex-end;
