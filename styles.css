@@ -665,7 +665,7 @@ button:hover {
 
 .tab__button__container-down {
   position: fixed;
-  bottom: -80px;
+  bottom: -120px;
   transition: var(--animation-all);
 }
 
