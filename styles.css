@@ -698,6 +698,7 @@ button:hover {
 .button__tab--1,
 .button__tab--2,
 .button__tab--3,
+.button__tab--4,
 .button__tab--7 {
   background-color: var(--color-1-darkest);
 }
