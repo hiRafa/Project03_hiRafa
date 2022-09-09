@@ -447,6 +447,11 @@ button:hover {
   height: 6rem;
 }
 
+.button__links-page {
+  color: white;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 360px) {
   .grid__pg-screenshots {
     height: 35vh;
@@ -575,6 +580,7 @@ button:hover {
   .button__links-page {
     width: 5.5rem;
     height: 5.5rem;
+    color: white;
   }
 
   .grid__under {
