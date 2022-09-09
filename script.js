@@ -10,16 +10,17 @@ tabsButtonContainer.addEventListener('click', function (e) {
 
   if (!clicked) return; //Guard Clause to return in case of null
 
-  //Active Button
+  // Active Button
   tabs.forEach(t => t.classList.remove('button__tab-active')); //to clear all classes before adding to any
   clicked.classList.add('button__tab-active');
 
-  //Active Content
+  // Active Content
   tabsContent.forEach(t => t.classList.remove('tab__content-active')); // to clear
   document
     .querySelector(`.tab__content--${clicked.dataset.tab}`)
     .classList.add('tab__content-active');
 
+  // Background set up
   if (tab1.matches('.tab__content--1.tab__content-active')) {
     document.querySelector('.body').classList.add('background__pg1');
   } else {
